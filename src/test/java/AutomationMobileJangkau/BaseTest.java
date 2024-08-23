@@ -19,7 +19,7 @@ public class BaseTest {
         capabilities.setCapability("app", "D:/KERJA/Sertifikasi Binar/jangkau.apk");
         capabilities.setCapability("automationName", "UiAutomator2");
         capabilities.setCapability("appPackage", "com.example.jangkau");
-        capabilities.setCapability("appActivity", "com.example.jangkau.MainActivity");
+        capabilities.setCapability("appActivity", "com.example.jangkau.SplashActivity");
 
         driver = new AndroidDriver(capabilities);
         wait = new WebDriverWait(driver, Duration.ofSeconds(15));
@@ -30,4 +30,9 @@ public class BaseTest {
             driver.quit();
         }
     }
+
+//    public static void resetApp() {
+//        driver.terminateApp("com.example.jangkau");
+//        driver.activateApp("com.example.jangkau");
+//    }
 }

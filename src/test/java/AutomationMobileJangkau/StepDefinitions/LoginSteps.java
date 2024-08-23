@@ -15,29 +15,36 @@ public class LoginSteps extends BaseTest {
     // Initialize Driver
     @Before
     public void setup(){
+        setupDriver();
         loginPage = new LoginPage(driver);
     }
 
     // Step definitions
-    @Given("user is launch jangkau app")
-    public void userIsLaunchJangkauApp() {
-        // Implementasi untuk meluncurkan aplikasi Jangkau
+    @Given("user is launch the app")
+    public void userIsLaunchJangkauAppAndGoToLoginPage() {
     }
 
-    @And("user input {string} into username field")
-    public void userInputIntoUsernameField(String arg0) {
-    }
-
-
-    @And("user input {string} into password field")
-    public void userInputIntoPasswordField(String arg0) {
-    }
-
-    @When("user click masuk button")
+    @And("user click masuk button")
     public void userClickMasukButton() {
+        loginPage.clickMasukButton();
     }
 
-    @Then("user is redirect to homepage")
-    public void userIsRedirectToHomepage() {
+    @And("user input username with {string}")
+    public void userInputUsernameWithUsername(String username) {
+        loginPage.inputUsername(username);
+    }
+
+    @And("user input password with {string}")
+    public void userInputPasswordWithPassword(String password) {
+        loginPage.inputPassword(password);
+    }
+
+    @When("user click login button")
+    public void userClickLoginButton() {
+        loginPage.clickLoginButton();
+    }
+
+    @Then("user is on homepage")
+    public void userIsOnHomepage() {
     }
 }

@@ -11,18 +11,19 @@ public class LoginPage extends BaseTest {
 
     private AndroidDriver driver;
 
-    public LoginPage(AndroidDriver driver){
-        this.driver = this.driver;
+    public LoginPage(AndroidDriver driver) {
+        this.driver = driver;
     }
 
     //Locator
     By masukButton = AppiumBy.accessibilityId("Tombol Masuk");
     By usernameForm = By.xpath("//android.widget.EditText[@content-desc='textfield input untuk username']");
     By passwordForm = By.xpath("//android.widget.EditText[@content-desc='textfield untuk input password']");
+    By loginButton = By.xpath("//android.widget.Button[@resource-id='com.example.jangkau:id/btnLogin']");
 
     //Method action for locator
     public void clickMasukButton(){
-        wait.until(ExpectedConditions.visibilityOfElementLocated(masukButton)).click();
+        wait.until(ExpectedConditions.presenceOfElementLocated(masukButton)).click();
     }
 
     public void inputUsername(String username){
@@ -31,6 +32,10 @@ public class LoginPage extends BaseTest {
 
     public void inputPassword(String password){
         wait.until(ExpectedConditions.visibilityOfElementLocated(passwordForm)).sendKeys(password);
+    }
+
+    public void clickLoginButton(){
+        wait.until(ExpectedConditions.visibilityOfElementLocated(loginButton)).click();
     }
 }
 

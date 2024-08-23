@@ -5,7 +5,7 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
         features = {"src/test/resources/features"},
-        glue = {"AutomationMobileJangkau.StepDefinitions"},
+        glue = {"AutomationMobileJangkau"},
         plugin = {
                 "pretty",
                 "html:target/report-cucumber.html",

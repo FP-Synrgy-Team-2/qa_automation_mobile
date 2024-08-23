@@ -1,9 +1,16 @@
 @login
   Feature: Login
+    Background: User open the app and proceed to login page
+      Given user is launch the app
+      And user click masuk button
 
-   Scenario: login with valid credentials
-     Given user is launch jangkau app
-     And user input "Fulan123" into username field
-     And user input "Fulan123!" into password field
-     When user click masuk button
-     Then user is redirect to homepage
+      Scenario Outline: login with invalid credentials
+        And user input username with <username>
+        And user input password with <password>
+        When user click login button
+        Then user is on homepage
+  Examples:
+    | username | password |
+    | "Fulan321"    | "Fulan123!" |
+    | "Fulan123"    | "Fulan321!" |
+    | "Fulan321"    | "Fulan321!" |
