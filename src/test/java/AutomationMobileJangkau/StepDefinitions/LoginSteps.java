@@ -44,7 +44,4 @@ public class LoginSteps extends BaseTest {
         loginPage.clickLoginButton();
     }
 
-    @Then("user is on homepage")
-    public void userIsOnHomepage() {
-    }
 }
