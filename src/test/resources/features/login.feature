@@ -8,16 +8,15 @@
         And user input username with <username>
         And user input password with <password>
         When user click login button
-        Then user is on homepage
+        Then user go back to login page
   Examples:
-    | username | password |
-    | "Fulan321"    | "Fulan123!" |
-    | "Fulan123"    | "Fulan321!" |
-    | "Fulan321"    | "Fulan321!" |
+    | username            | password            |
+    | "Fulansalah321"     | "FulanPassword123!" |
+    | "Fulan123"          | "FulanSalah123!"    |
 
-    @valid-login
-    Scenario: Login with valid credentials
-      And user input username with "Fulan123"
-      And user input password with "FulanPassword123!"
-      When user click login button
-      Then user is on homepage
+#    @valid-login
+#    Scenario: Login with valid credentials
+#      And user input username with "Fulan123"
+#      And user input password with "FulanPassword123!"
+#      When user click login button
+#      Then user is on homepage

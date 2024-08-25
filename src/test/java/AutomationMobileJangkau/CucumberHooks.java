@@ -16,8 +16,8 @@ public class CucumberHooks {
         BaseTest.stopDriver();
     }
 
-//    @After
-//    public static void after() {
-//        BaseTest.resetApp();
-//    }
+    @After
+    public static void after() {
+        BaseTest.resetApp();
+    }
 }

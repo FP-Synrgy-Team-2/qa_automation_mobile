@@ -18,4 +18,5 @@ public class HomeSteps extends BaseTest {
     public void userIsOnHomepage() {
         homepage.validateHomePage();
     }
+
 }

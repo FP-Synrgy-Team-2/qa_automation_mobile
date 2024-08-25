@@ -8,6 +8,9 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
 
+import static org.testng.AssertJUnit.assertEquals;
+
+
 public class LoginSteps extends BaseTest {
 
     private LoginPage loginPage;
@@ -44,4 +47,9 @@ public class LoginSteps extends BaseTest {
         loginPage.clickLoginButton();
     }
 
+    @Then("user go back to login page")
+    public void userGoBackToLoginPage() {
+        String message =loginPage.invalidNotification();
+        assertEquals("Username dan password salah, silahkan coba lagi", message);
+    }
 }
