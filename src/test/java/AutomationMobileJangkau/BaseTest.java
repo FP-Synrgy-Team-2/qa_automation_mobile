@@ -32,7 +32,7 @@ public class BaseTest {
     }
 
     public static void resetApp() {
-        driver.terminateApp("com.example.jangkau");
+//        driver.terminateApp("com.example.jangkau");
         driver.activateApp("com.example.jangkau");
     }
 }

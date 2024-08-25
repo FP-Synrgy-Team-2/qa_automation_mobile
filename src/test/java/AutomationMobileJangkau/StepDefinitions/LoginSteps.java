@@ -47,8 +47,8 @@ public class LoginSteps extends BaseTest {
         loginPage.clickLoginButton();
     }
 
-    @Then("user go back to login page")
-    public void userGoBackToLoginPage() {
+    @Then("user get alert")
+    public void userGetAlert() {
         String message =loginPage.invalidNotification();
         assertEquals("Username dan password salah, silahkan coba lagi", message);
     }

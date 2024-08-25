@@ -24,17 +24,12 @@ public class LoginPage extends BaseTest {
     By passwordForm = By.xpath("//android.widget.EditText[@content-desc='textfield untuk input password']");
     By loginButton = By.xpath("//android.widget.Button[@resource-id='com.example.jangkau:id/btnLogin']");
     By errorAlert = By.xpath("//android.widget.TextView[contains(@text, 'Username dan password salah, silahkan coba lagi')]");
-    By loadingPage = By.xpath("//android.view.ViewGroup[@resource-id='com.example.jangkau:id/main']");
+//    By loadingPage = By.xpath("//android.view.ViewGroup[@resource-id='com.example.jangkau:id/main']");
 
     //Method action for locator
     public void clickMasukButton(){
-        wait.until(ExpectedConditions.presenceOfElementLocated(masukButton)).click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(masukButton)).click();
     }
-
-//    public void waitLoading(){
-////        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-//        wait.until(ExpectedConditions.visibilityOfElementLocated(loadingPage));
-//    }
 
     public String invalidNotification(){
         return wait.until(ExpectedConditions.visibilityOfElementLocated(errorAlert)).getText();
