@@ -1,4 +1,5 @@
-  Feature: Login with valid credentials
+@Login
+Feature: Login with valid credentials
     Scenario: Login with valid credentials
       Given user is launch the app
       And user click masuk button

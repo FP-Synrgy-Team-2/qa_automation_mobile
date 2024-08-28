@@ -39,8 +39,8 @@ public class HomePage extends BaseTest {
         wait.until(ExpectedConditions.presenceOfElementLocated(accountNumber));
     }
 
-    public String balance() {
-        return wait.until(ExpectedConditions.visibilityOfElementLocated(remainingBalace)).getText();
+    public void remainBalance() {
+       wait.until(ExpectedConditions.presenceOfElementLocated(remainingBalace)).isDisplayed();
     }
 
     public void clickTransferButton(){
